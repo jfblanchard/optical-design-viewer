@@ -146,6 +146,8 @@ function shortTitle(d) {
 // --------------------------------------------------------------------------- center
 
 const PLOTS = [["spot", "Spot diagram"], ["fan", "Ray fan"], ["mtf", "MTF"]];
+// the plots trace the full pupil, unlike the drawing, which shows only rays that clear every aperture
+const FULL = " @ full aperture";
 
 function renderCenter(d) {
   const fo = d.metrics.first_order;
@@ -162,8 +164,8 @@ function renderCenter(d) {
   const have = PLOTS.filter(([k]) => d.images[k]);
   const plots = have.length
     ? el("div", { class: "plots" }, PLOTS.map(([k, name]) => d.images[k]
-      ? el("button", { class: "tile", title: `Enlarge ${name}`, onclick: () => zoom(d.images[k], `${shortTitle(d)}: ${name}`) },
-        el("img", { src: d.images[k], alt: name }), el("span", {}, name))
+      ? el("button", { class: "tile", title: `Enlarge ${name}`, onclick: () => zoom(d.images[k], `${shortTitle(d)}: ${name}${FULL}`) },
+        el("img", { src: d.images[k], alt: name + FULL }), el("span", {}, name + FULL))
       : el("div", { class: "tile none" }, el("span", {}, `${name}: not available`))))
     : el("p", { class: "fine plots-none" },
       d.notes.find((n) => n.startsWith("MTF")) || "No performance plots for this design.");
