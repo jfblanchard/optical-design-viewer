@@ -75,13 +75,18 @@ a:hover { text-decoration: underline; }
 
 .view h1 { font-size: 20px; font-weight: 600; margin: 0 0 0.25rem; }
 .view .meta { color: var(--dim); margin: 0 0 1rem; }
+/* the drawing is a white-paper plot: a card that hugs it, not a white slab across the pane */
 .figure {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem;
   background: #fff;
-  border-radius: 6px;
-  padding: 0.75rem;
-  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 0 0 4px var(--pane), 0 10px 30px rgba(0, 0, 0, 0.45);
 }
-.figure img { max-width: 100%; max-height: 62vh; }
+.figure img { display: block; max-width: 100%; max-height: 62vh; }
 .notes { margin: 1rem 0 0; padding-left: 1.1rem; color: var(--dim); font-size: 13px; }
 .notes li.warn { color: var(--warn); }
 .prose { max-width: 48rem; }
