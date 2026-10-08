@@ -6,7 +6,8 @@
   "MIT"
  ],
  "caveats": [
-  "Spot and MTF are traced through the full, unvignetted pupil: the source's clear semi-diameters are not applied as stops, so off-axis spots of fast photographic lenses read larger than the real lens delivers."
+  "Spot and MTF are traced through the full, unvignetted pupil: the source's clear semi-diameters are not applied as stops, so off-axis spots of fast photographic lenses read larger than the real lens delivers.",
+  "The cross-section draws each lens face at the source's clear semi-diameter (else 1.0 to 1.1x the traced beam), so drawn rays that fall outside a clear aperture stop there."
  ],
  "count": 32,
  "families": {
