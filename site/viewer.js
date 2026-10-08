@@ -145,7 +145,7 @@ function shortTitle(d) {
 
 // --------------------------------------------------------------------------- center
 
-const PLOTS = [["mtf", "MTF"], ["spot", "RMS spot per field"], ["distortion", "Distortion"]];
+const PLOTS = [["spot", "Spot diagram"], ["fan", "Ray fan"], ["mtf", "MTF"]];
 
 function renderCenter(d) {
   const fo = d.metrics.first_order;

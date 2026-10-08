@@ -6,8 +6,8 @@ window.LENS_MANIFEST = {
   "MIT"
  ],
  "caveats": [
-  "Spot and MTF are traced through the full, unvignetted pupil: the source's clear semi-diameters are not applied as stops, so off-axis spots of fast photographic lenses read larger than the real lens delivers.",
-  "The cross-section draws each lens face at the source's clear semi-diameter (else 1.0 to 1.1x the traced beam), so drawn rays that fall outside a clear aperture stop there."
+  "Spot diagram, ray fan and MTF are traced through the full, unvignetted pupil: the source's clear semi-diameters are not applied as stops, so off-axis spots of fast photographic lenses read larger than the real lens delivers.",
+  "The cross-section draws each lens face at the source's clear semi-diameter (else 1.0 to 1.1x the traced beam) and shows only rays that pass every one of those apertures to the image; vignetted rays are left out."
  ],
  "count": 32,
  "families": {
@@ -1325,9 +1325,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/braat_fig7_24_cooke_triplet/layout.png",
-    "mtf": "assets/braat_fig7_24_cooke_triplet/mtf.png",
     "spot": "assets/braat_fig7_24_cooke_triplet/spot.png",
-    "distortion": "assets/braat_fig7_24_cooke_triplet/distortion.png"
+    "fan": "assets/braat_fig7_24_cooke_triplet/fan.png",
+    "mtf": "assets/braat_fig7_24_cooke_triplet/mtf.png"
    },
    "files": {
     "prescription": "assets/braat_fig7_24_cooke_triplet/prescription.yaml",
@@ -2572,9 +2572,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/pat_de2818394_ex1_geronar_210f6p8/layout.png",
-    "mtf": "assets/pat_de2818394_ex1_geronar_210f6p8/mtf.png",
     "spot": "assets/pat_de2818394_ex1_geronar_210f6p8/spot.png",
-    "distortion": "assets/pat_de2818394_ex1_geronar_210f6p8/distortion.png"
+    "fan": "assets/pat_de2818394_ex1_geronar_210f6p8/fan.png",
+    "mtf": "assets/pat_de2818394_ex1_geronar_210f6p8/mtf.png"
    },
    "files": {
     "prescription": "assets/pat_de2818394_ex1_geronar_210f6p8/prescription.yaml",
@@ -3804,9 +3804,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/pat_us2298090_ex1_tth_triplet/layout.png",
-    "mtf": "assets/pat_us2298090_ex1_tth_triplet/mtf.png",
     "spot": "assets/pat_us2298090_ex1_tth_triplet/spot.png",
-    "distortion": "assets/pat_us2298090_ex1_tth_triplet/distortion.png"
+    "fan": "assets/pat_us2298090_ex1_tth_triplet/fan.png",
+    "mtf": "assets/pat_us2298090_ex1_tth_triplet/mtf.png"
    },
    "files": {
     "prescription": "assets/pat_us2298090_ex1_tth_triplet/prescription.yaml",
@@ -5125,9 +5125,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/pat_ch346706_ex1_xenon_50f2/layout.png",
-    "mtf": "assets/pat_ch346706_ex1_xenon_50f2/mtf.png",
     "spot": "assets/pat_ch346706_ex1_xenon_50f2/spot.png",
-    "distortion": "assets/pat_ch346706_ex1_xenon_50f2/distortion.png"
+    "fan": "assets/pat_ch346706_ex1_xenon_50f2/fan.png",
+    "mtf": "assets/pat_ch346706_ex1_xenon_50f2/mtf.png"
    },
    "files": {
     "prescription": "assets/pat_ch346706_ex1_xenon_50f2/prescription.yaml",
@@ -6481,9 +6481,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/pat_de1045120_ex1_summilux_50f1p4/layout.png",
-    "mtf": "assets/pat_de1045120_ex1_summilux_50f1p4/mtf.png",
     "spot": "assets/pat_de1045120_ex1_summilux_50f1p4/spot.png",
-    "distortion": "assets/pat_de1045120_ex1_summilux_50f1p4/distortion.png"
+    "fan": "assets/pat_de1045120_ex1_summilux_50f1p4/fan.png",
+    "mtf": "assets/pat_de1045120_ex1_summilux_50f1p4/mtf.png"
    },
    "files": {
     "prescription": "assets/pat_de1045120_ex1_summilux_50f1p4/prescription.yaml",
@@ -7848,9 +7848,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/pat_us3874771_ex5_planar_50f1p4/layout.png",
-    "mtf": "assets/pat_us3874771_ex5_planar_50f1p4/mtf.png",
     "spot": "assets/pat_us3874771_ex5_planar_50f1p4/spot.png",
-    "distortion": "assets/pat_us3874771_ex5_planar_50f1p4/distortion.png"
+    "fan": "assets/pat_us3874771_ex5_planar_50f1p4/fan.png",
+    "mtf": "assets/pat_us3874771_ex5_planar_50f1p4/mtf.png"
    },
    "files": {
     "prescription": "assets/pat_us3874771_ex5_planar_50f1p4/prescription.yaml",
@@ -9184,9 +9184,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/pat_us583336_ex2_rudolph_planar/layout.png",
-    "mtf": "assets/pat_us583336_ex2_rudolph_planar/mtf.png",
     "spot": "assets/pat_us583336_ex2_rudolph_planar/spot.png",
-    "distortion": "assets/pat_us583336_ex2_rudolph_planar/distortion.png"
+    "fan": "assets/pat_us583336_ex2_rudolph_planar/fan.png",
+    "mtf": "assets/pat_us583336_ex2_rudolph_planar/mtf.png"
    },
    "files": {
     "prescription": "assets/pat_us583336_ex2_rudolph_planar/prescription.yaml",
@@ -10444,9 +10444,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/mil141_ch14_berthele/layout.png",
-    "mtf": "assets/mil141_ch14_berthele/mtf.png",
     "spot": "assets/mil141_ch14_berthele/spot.png",
-    "distortion": "assets/mil141_ch14_berthele/distortion.png"
+    "fan": "assets/mil141_ch14_berthele/fan.png",
+    "mtf": "assets/mil141_ch14_berthele/mtf.png"
    },
    "files": {
     "prescription": "assets/mil141_ch14_berthele/prescription.yaml"
@@ -11727,9 +11727,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/mil141_ch14_erfle/layout.png",
-    "mtf": "assets/mil141_ch14_erfle/mtf.png",
     "spot": "assets/mil141_ch14_erfle/spot.png",
-    "distortion": "assets/mil141_ch14_erfle/distortion.png"
+    "fan": "assets/mil141_ch14_erfle/fan.png",
+    "mtf": "assets/mil141_ch14_erfle/mtf.png"
    },
    "files": {
     "prescription": "assets/mil141_ch14_erfle/prescription.yaml"
@@ -12918,9 +12918,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/mil141_ch14_huygenian/layout.png",
-    "mtf": "assets/mil141_ch14_huygenian/mtf.png",
     "spot": "assets/mil141_ch14_huygenian/spot.png",
-    "distortion": "assets/mil141_ch14_huygenian/distortion.png"
+    "fan": "assets/mil141_ch14_huygenian/fan.png",
+    "mtf": "assets/mil141_ch14_huygenian/mtf.png"
    },
    "files": {
     "prescription": "assets/mil141_ch14_huygenian/prescription.yaml"
@@ -14135,9 +14135,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/mil141_ch14_kellner/layout.png",
-    "mtf": "assets/mil141_ch14_kellner/mtf.png",
     "spot": "assets/mil141_ch14_kellner/spot.png",
-    "distortion": "assets/mil141_ch14_kellner/distortion.png"
+    "fan": "assets/mil141_ch14_kellner/fan.png",
+    "mtf": "assets/mil141_ch14_kellner/mtf.png"
    },
    "files": {
     "prescription": "assets/mil141_ch14_kellner/prescription.yaml"
@@ -15439,9 +15439,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/mil141_ch14_modified_erfle/layout.png",
-    "mtf": "assets/mil141_ch14_modified_erfle/mtf.png",
     "spot": "assets/mil141_ch14_modified_erfle/spot.png",
-    "distortion": "assets/mil141_ch14_modified_erfle/distortion.png"
+    "fan": "assets/mil141_ch14_modified_erfle/fan.png",
+    "mtf": "assets/mil141_ch14_modified_erfle/mtf.png"
    },
    "files": {
     "prescription": "assets/mil141_ch14_modified_erfle/prescription.yaml"
@@ -16679,9 +16679,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/mil141_ch14_orthoscopic/layout.png",
-    "mtf": "assets/mil141_ch14_orthoscopic/mtf.png",
     "spot": "assets/mil141_ch14_orthoscopic/spot.png",
-    "distortion": "assets/mil141_ch14_orthoscopic/distortion.png"
+    "fan": "assets/mil141_ch14_orthoscopic/fan.png",
+    "mtf": "assets/mil141_ch14_orthoscopic/mtf.png"
    },
    "files": {
     "prescription": "assets/mil141_ch14_orthoscopic/prescription.yaml"
@@ -17923,9 +17923,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/mil141_ch14_plossl/layout.png",
-    "mtf": "assets/mil141_ch14_plossl/mtf.png",
     "spot": "assets/mil141_ch14_plossl/spot.png",
-    "distortion": "assets/mil141_ch14_plossl/distortion.png"
+    "fan": "assets/mil141_ch14_plossl/fan.png",
+    "mtf": "assets/mil141_ch14_plossl/mtf.png"
    },
    "files": {
     "prescription": "assets/mil141_ch14_plossl/prescription.yaml"
@@ -19115,9 +19115,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/mil141_ch14_ramsden/layout.png",
-    "mtf": "assets/mil141_ch14_ramsden/mtf.png",
     "spot": "assets/mil141_ch14_ramsden/spot.png",
-    "distortion": "assets/mil141_ch14_ramsden/distortion.png"
+    "fan": "assets/mil141_ch14_ramsden/fan.png",
+    "mtf": "assets/mil141_ch14_ramsden/mtf.png"
    },
    "files": {
     "prescription": "assets/mil141_ch14_ramsden/prescription.yaml"
@@ -20435,9 +20435,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/mil141_ch14_wild/layout.png",
-    "mtf": "assets/mil141_ch14_wild/mtf.png",
     "spot": "assets/mil141_ch14_wild/spot.png",
-    "distortion": "assets/mil141_ch14_wild/distortion.png"
+    "fan": "assets/mil141_ch14_wild/fan.png",
+    "mtf": "assets/mil141_ch14_wild/mtf.png"
    },
    "files": {
     "prescription": "assets/mil141_ch14_wild/prescription.yaml"
@@ -20646,9 +20646,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/mil141_ch07_afocal_microscope_t7_2/layout.png",
-    "mtf": null,
     "spot": null,
-    "distortion": null
+    "fan": null,
+    "mtf": null
    },
    "files": {
     "prescription": "assets/mil141_ch07_afocal_microscope_t7_2/prescription.yaml"
@@ -20668,7 +20668,7 @@ window.LENS_MANIFEST = {
    ],
    "notes": [
     "MTF not plotted: ideal thin lenses give a point image, so the MTF is the diffraction limit",
-    "ideal thin lenses: zero spot size and zero distortion, so neither is plotted"
+    "ideal thin lenses: zero spot size and zero ray error, so neither spot diagram nor ray fan is plotted"
    ]
   },
   {
@@ -20876,9 +20876,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/mil141_ch07_afocal_microscope_t7_4/layout.png",
-    "mtf": null,
     "spot": null,
-    "distortion": null
+    "fan": null,
+    "mtf": null
    },
    "files": {
     "prescription": "assets/mil141_ch07_afocal_microscope_t7_4/prescription.yaml"
@@ -20897,7 +20897,7 @@ window.LENS_MANIFEST = {
    ],
    "notes": [
     "MTF not plotted: ideal thin lenses give a point image, so the MTF is the diffraction limit",
-    "ideal thin lenses: zero spot size and zero distortion, so neither is plotted"
+    "ideal thin lenses: zero spot size and zero ray error, so neither spot diagram nor ray fan is plotted"
    ]
   },
   {
@@ -22199,9 +22199,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/mil141_ch23_fluorite_objective_1p8mm/layout.png",
-    "mtf": "assets/mil141_ch23_fluorite_objective_1p8mm/mtf.png",
     "spot": "assets/mil141_ch23_fluorite_objective_1p8mm/spot.png",
-    "distortion": "assets/mil141_ch23_fluorite_objective_1p8mm/distortion.png"
+    "fan": "assets/mil141_ch23_fluorite_objective_1p8mm/fan.png",
+    "mtf": "assets/mil141_ch23_fluorite_objective_1p8mm/mtf.png"
    },
    "files": {
     "prescription": "assets/mil141_ch23_fluorite_objective_1p8mm/prescription.yaml"
@@ -23471,9 +23471,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/braat_fig7_19a_petzval/layout.png",
-    "mtf": "assets/braat_fig7_19a_petzval/mtf.png",
     "spot": "assets/braat_fig7_19a_petzval/spot.png",
-    "distortion": "assets/braat_fig7_19a_petzval/distortion.png"
+    "fan": "assets/braat_fig7_19a_petzval/fan.png",
+    "mtf": "assets/braat_fig7_19a_petzval/mtf.png"
    },
    "files": {
     "prescription": "assets/braat_fig7_19a_petzval/prescription.yaml",
@@ -24744,9 +24744,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/braat_fig7_19b_petzval_flat/layout.png",
-    "mtf": "assets/braat_fig7_19b_petzval_flat/mtf.png",
     "spot": "assets/braat_fig7_19b_petzval_flat/spot.png",
-    "distortion": "assets/braat_fig7_19b_petzval_flat/distortion.png"
+    "fan": "assets/braat_fig7_19b_petzval_flat/fan.png",
+    "mtf": "assets/braat_fig7_19b_petzval_flat/mtf.png"
    },
    "files": {
     "prescription": "assets/braat_fig7_19b_petzval_flat/prescription.yaml",
@@ -26038,9 +26038,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/braat_fig7_20_dallmeyer_portrait/layout.png",
-    "mtf": "assets/braat_fig7_20_dallmeyer_portrait/mtf.png",
     "spot": "assets/braat_fig7_20_dallmeyer_portrait/spot.png",
-    "distortion": "assets/braat_fig7_20_dallmeyer_portrait/distortion.png"
+    "fan": "assets/braat_fig7_20_dallmeyer_portrait/fan.png",
+    "mtf": "assets/braat_fig7_20_dallmeyer_portrait/mtf.png"
    },
    "files": {
     "prescription": "assets/braat_fig7_20_dallmeyer_portrait/prescription.yaml",
@@ -26297,9 +26297,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/mil141_ch12_double_relay/layout.png",
-    "mtf": null,
     "spot": null,
-    "distortion": null
+    "fan": null,
+    "mtf": null
    },
    "files": {
     "prescription": "assets/mil141_ch12_double_relay/prescription.yaml"
@@ -26318,7 +26318,7 @@ window.LENS_MANIFEST = {
    ],
    "notes": [
     "MTF not plotted: ideal thin lenses give a point image, so the MTF is the diffraction limit",
-    "ideal thin lenses: zero spot size and zero distortion, so neither is plotted"
+    "ideal thin lenses: zero spot size and zero ray error, so neither spot diagram nor ray fan is plotted"
    ]
   },
   {
@@ -26508,9 +26508,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/mil141_ch12_single_relay/layout.png",
-    "mtf": null,
     "spot": null,
-    "distortion": null
+    "fan": null,
+    "mtf": null
    },
    "files": {
     "prescription": "assets/mil141_ch12_single_relay/prescription.yaml"
@@ -26529,7 +26529,7 @@ window.LENS_MANIFEST = {
    ],
    "notes": [
     "MTF not plotted: ideal thin lenses give a point image, so the MTF is the diffraction limit",
-    "ideal thin lenses: zero spot size and zero distortion, so neither is plotted"
+    "ideal thin lenses: zero spot size and zero ray error, so neither spot diagram nor ray fan is plotted"
    ]
   },
   {
@@ -27812,9 +27812,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/pat_us1998704_ex1_bertele_sonnar/layout.png",
-    "mtf": "assets/pat_us1998704_ex1_bertele_sonnar/mtf.png",
     "spot": "assets/pat_us1998704_ex1_bertele_sonnar/spot.png",
-    "distortion": "assets/pat_us1998704_ex1_bertele_sonnar/distortion.png"
+    "fan": "assets/pat_us1998704_ex1_bertele_sonnar/fan.png",
+    "mtf": "assets/pat_us1998704_ex1_bertele_sonnar/mtf.png"
    },
    "files": {
     "prescription": "assets/pat_us1998704_ex1_bertele_sonnar/prescription.yaml",
@@ -29095,9 +29095,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/pat_us2720140_ex3_sonnar_150f4/layout.png",
-    "mtf": "assets/pat_us2720140_ex3_sonnar_150f4/mtf.png",
     "spot": "assets/pat_us2720140_ex3_sonnar_150f4/spot.png",
-    "distortion": "assets/pat_us2720140_ex3_sonnar_150f4/distortion.png"
+    "fan": "assets/pat_us2720140_ex3_sonnar_150f4/fan.png",
+    "mtf": "assets/pat_us2720140_ex3_sonnar_150f4/mtf.png"
    },
    "files": {
     "prescription": "assets/pat_us2720140_ex3_sonnar_150f4/prescription.yaml",
@@ -30363,9 +30363,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/pat_de1096057_ex1_telyt_200f4/layout.png",
-    "mtf": "assets/pat_de1096057_ex1_telyt_200f4/mtf.png",
     "spot": "assets/pat_de1096057_ex1_telyt_200f4/spot.png",
-    "distortion": "assets/pat_de1096057_ex1_telyt_200f4/distortion.png"
+    "fan": "assets/pat_de1096057_ex1_telyt_200f4/fan.png",
+    "mtf": "assets/pat_de1096057_ex1_telyt_200f4/mtf.png"
    },
    "files": {
     "prescription": "assets/pat_de1096057_ex1_telyt_200f4/prescription.yaml",
@@ -31667,9 +31667,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/pat_de2206106_ex1_zuiko_1000f11/layout.png",
-    "mtf": "assets/pat_de2206106_ex1_zuiko_1000f11/mtf.png",
     "spot": "assets/pat_de2206106_ex1_zuiko_1000f11/spot.png",
-    "distortion": "assets/pat_de2206106_ex1_zuiko_1000f11/distortion.png"
+    "fan": "assets/pat_de2206106_ex1_zuiko_1000f11/fan.png",
+    "mtf": "assets/pat_de2206106_ex1_zuiko_1000f11/mtf.png"
    },
    "files": {
     "prescription": "assets/pat_de2206106_ex1_zuiko_1000f11/prescription.yaml",
@@ -33044,9 +33044,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/mil141_ch15_telescope_10x/layout.png",
-    "mtf": "assets/mil141_ch15_telescope_10x/mtf.png",
     "spot": "assets/mil141_ch15_telescope_10x/spot.png",
-    "distortion": "assets/mil141_ch15_telescope_10x/distortion.png"
+    "fan": "assets/mil141_ch15_telescope_10x/fan.png",
+    "mtf": "assets/mil141_ch15_telescope_10x/mtf.png"
    },
    "files": {
     "prescription": "assets/mil141_ch15_telescope_10x/prescription.yaml"
@@ -34336,9 +34336,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/pat_de753329_ex1_xenar_50f2p8/layout.png",
-    "mtf": "assets/pat_de753329_ex1_xenar_50f2p8/mtf.png",
     "spot": "assets/pat_de753329_ex1_xenar_50f2p8/spot.png",
-    "distortion": "assets/pat_de753329_ex1_xenar_50f2p8/distortion.png"
+    "fan": "assets/pat_de753329_ex1_xenar_50f2p8/fan.png",
+    "mtf": "assets/pat_de753329_ex1_xenar_50f2p8/mtf.png"
    },
    "files": {
     "prescription": "assets/pat_de753329_ex1_xenar_50f2p8/prescription.yaml",
@@ -35624,9 +35624,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/pat_fr1066698_ex1_tessar_50f2p8/layout.png",
-    "mtf": "assets/pat_fr1066698_ex1_tessar_50f2p8/mtf.png",
     "spot": "assets/pat_fr1066698_ex1_tessar_50f2p8/spot.png",
-    "distortion": "assets/pat_fr1066698_ex1_tessar_50f2p8/distortion.png"
+    "fan": "assets/pat_fr1066698_ex1_tessar_50f2p8/fan.png",
+    "mtf": "assets/pat_fr1066698_ex1_tessar_50f2p8/mtf.png"
    },
    "files": {
     "prescription": "assets/pat_fr1066698_ex1_tessar_50f2p8/prescription.yaml",
@@ -36943,9 +36943,9 @@ window.LENS_MANIFEST = {
    ],
    "images": {
     "layout": "assets/pat_de975637_ex1_super_angulon_90f8/layout.png",
-    "mtf": "assets/pat_de975637_ex1_super_angulon_90f8/mtf.png",
     "spot": "assets/pat_de975637_ex1_super_angulon_90f8/spot.png",
-    "distortion": "assets/pat_de975637_ex1_super_angulon_90f8/distortion.png"
+    "fan": "assets/pat_de975637_ex1_super_angulon_90f8/fan.png",
+    "mtf": "assets/pat_de975637_ex1_super_angulon_90f8/mtf.png"
    },
    "files": {
     "prescription": "assets/pat_de975637_ex1_super_angulon_90f8/prescription.yaml",
