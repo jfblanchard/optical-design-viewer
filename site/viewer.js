@@ -74,13 +74,48 @@ function fmt(x, digits = 4) {
 }
 
 function figure(src, alt) {
-  return el("div", { class: "figure" }, el("img", { src, alt }));
+  return el("button", { class: "figure", title: "Enlarge", onclick: () => zoom(src, alt) }, el("img", { src, alt }));
 }
 
 function kv(rows) {
   return el("table", { class: "kv" },
     rows.filter((r) => r).map(([k, v, text]) =>
       el("tr", {}, el("td", {}, k), el("td", text ? { class: "text" } : {}, v))));
+}
+
+// Short always-on numbers: label over value, two to a row; `wide` rows span both columns.
+function stats(rows) {
+  return el("dl", { class: "stats" },
+    rows.filter((r) => r).map(([k, v, wide]) =>
+      el("div", wide ? { class: "wide" } : {}, el("dt", {}, k), el("dd", {}, v))));
+}
+
+// Collapsible right-panel section. Shut by default; whichever ones the reader opens stay open
+// from design to design (and across visits).
+const OPEN_KEY = "lensviewer.open";
+const store = {  // localStorage can be absent or throw (privacy modes); then state lasts the visit
+  get: () => { try { return JSON.parse(localStorage.getItem(OPEN_KEY)) || []; } catch { return []; } },
+  set: (v) => { try { localStorage.setItem(OPEN_KEY, JSON.stringify(v)); } catch { /* keep in memory */ } },
+};
+const openSections = new Set(store.get());
+
+function section(key, title, ...body) {
+  const d = el("details", { class: "sec" }, el("summary", {}, title), el("div", { class: "body" }, ...body));
+  d.open = openSections.has(key);
+  d.addEventListener("toggle", () => {
+    d.open ? openSections.add(key) : openSections.delete(key);
+    store.set([...openSections]);
+  });
+  return d;
+}
+
+// --------------------------------------------------------------------------- plot zoom
+
+function zoom(src, caption) {
+  $("zoom-img").src = src;
+  $("zoom-img").alt = caption;
+  $("zoom-cap").textContent = caption;
+  $("zoom").showModal();
 }
 
 // --------------------------------------------------------------------------- left list
@@ -94,12 +129,13 @@ function renderList() {
   const rank = (f) => (FAMILY_ORDER.includes(f) ? FAMILY_ORDER.indexOf(f) : 1e3);
   const fams = [...groups.keys()].sort((a, b) => rank(a) - rank(b) || familyName(a).localeCompare(familyName(b)));
   $("list").replaceChildren(...fams.map((f) =>
-    el("div", { class: "family" },
-      el("h2", {}, `${familyName(f)} (${groups.get(f).length})`),
-      groups.get(f)
-        .sort((a, b) => a.title.localeCompare(b.title))
-        .map((d) => el("button", { "data-id": d.id, title: d.title, onclick: () => (location.hash = d.id) },
-          shortTitle(d))))));
+    el("details", { class: "sec family" },
+      el("summary", {}, familyName(f), el("span", { class: "n" }, String(groups.get(f).length))),
+      el("div", { class: "body" },
+        groups.get(f)
+          .sort((a, b) => a.title.localeCompare(b.title))
+          .map((d) => el("button", { "data-id": d.id, title: d.title, onclick: () => (location.hash = d.id) },
+            shortTitle(d)))))));
 }
 
 function shortTitle(d) {
@@ -109,23 +145,36 @@ function shortTitle(d) {
 
 // --------------------------------------------------------------------------- center
 
+const PLOTS = [["mtf", "MTF"], ["spot", "RMS spot per field"], ["distortion", "Distortion"]];
+
 function renderCenter(d) {
-  const notes = [];
-  if (d.system.configurations > 1) {
-    notes.push(el("li", { class: "warn" }, `Multi-config (${d.system.configurations} configurations): showing first.`));
-  }
-  for (const n of d.notes.filter((n) => !n.startsWith("multi-config"))) notes.push(el("li", {}, n));
-  for (const n of manifest.caveats || []) notes.push(el("li", {}, n));
+  const fo = d.metrics.first_order;
+  const sys = d.system;
+  const meta = [
+    familyName(d.family),
+    `${d.form.elements} elements`,
+    `${d.form.groups} groups`,
+    sys.afocal ? "afocal" : `EFL ${fmt(fo.efl)} mm`,
+    !sys.afocal && `f/${fmt(fo.fno, 3)}`,
+    d.spec.magnifying_power != null && `${fmt(d.spec.magnifying_power, 3)}×`,
+  ].filter(Boolean).join(" · ");
+
+  const have = PLOTS.filter(([k]) => d.images[k]);
+  const plots = have.length
+    ? el("div", { class: "plots" }, PLOTS.map(([k, name]) => d.images[k]
+      ? el("button", { class: "tile", title: `Enlarge ${name}`, onclick: () => zoom(d.images[k], `${shortTitle(d)}: ${name}`) },
+        el("img", { src: d.images[k], alt: name }), el("span", {}, name))
+      : el("div", { class: "tile none" }, el("span", {}, `${name}: not available`))))
+    : el("p", { class: "fine plots-none" },
+      d.notes.find((n) => n.startsWith("MTF")) || "No performance plots for this design.");
 
   $("view").replaceChildren(
-    el("h1", {}, d.title),
-    el("p", { class: "meta" },
-      `${familyName(d.family)}${d.subtype ? " · " + d.subtype.replace(/_/g, " ") : ""}`
-      + ` · ${d.form.elements} elements in ${d.form.groups} groups`
-      + (d.system.afocal ? " · afocal" : "")),
+    el("header", { class: "head" },
+      el("h1", {}, shortTitle(d)),
+      el("p", { class: "meta" }, meta,
+        sys.configurations > 1 ? el("span", { class: "warn" }, ` · multi-config: showing 1 of ${sys.configurations}`) : null)),
     VIEWS["2d"](d),
-    d.design_notes ? el("p", { class: "prose" }, d.design_notes) : null,
-    notes.length ? el("ul", { class: "notes" }, notes) : null,
+    plots,
   );
 }
 
@@ -139,7 +188,7 @@ function renderPanel(d) {
   const dist = d.metrics.distortion;
   const src = d.source;
 
-  const specs = kv([
+  const head = stats([
     !sys.afocal && ["EFL", `${fmt(fo.efl)} mm`],
     !sys.afocal && ["F/#", fmt(fo.fno, 3)],
     ["EPD", `${fmt(fo.epd)} mm`],
@@ -148,9 +197,12 @@ function renderPanel(d) {
     d.spec.magnifying_power != null && ["Magnifying power", `${fmt(d.spec.magnifying_power, 3)}×`],
     d.spec.na != null && ["NA", fmt(d.spec.na, 3)],
     !sys.afocal && ["BFL", `${fmt(fo.bfl)} mm`],
-    ["Length (first to last surface)", `${fmt(fo.ttl)} mm`],
+    ["Vertex length", `${fmt(fo.ttl)} mm`],
     ["Elements / groups", `${d.form.elements} / ${d.form.groups}`],
-    d.form.sequence && ["Sequence", d.form.sequence],
+    d.form.sequence && ["Sequence", d.form.sequence, true],
+  ]);
+
+  const system = kv([
     d.form.stop && ["Stop", d.form.stop, true],
     ["Field", `${sys.field.values.map((v) => fmt(v, 3)).join(", ")} ${fieldUnit}`],
     ["Conjugate", `${d.spec.conjugate}${sys.afocal ? ` (measured through an ideal f = ${sys.analysis_f} mm lens)` : ""}`, true],
@@ -161,29 +213,36 @@ function renderPanel(d) {
     ["Petzval sum", `${fmt(d.metrics.petzval_sum_per_mm)} /mm`],
   ]);
 
-  const spots = kv(spot.fields.map((f, i) => [`${fmt(f, 3)} ${fieldUnit}`, `${fmt(spot.values[i], 3)} ${spot.unit}`]));
+  const spots = kv([
+    ...spot.fields.map((f, i) => [`${fmt(f, 3)} ${fieldUnit}`, `${fmt(spot.values[i], 3)} ${spot.unit}`]),
+    ["Distortion at full field", `${fmt(dist.max_pct, 3)} %`],
+  ]);
 
-  const img = (key, alt) => (d.images[key] ? el("img", { class: "plot", src: d.images[key], alt }) : null);
+  const notes = d.notes.filter((n) => !n.startsWith("multi-config"));
 
   $("panel").replaceChildren(
-    el("h2", {}, "Specs"), specs,
-    el("h2", {}, "Seidel sums"), seidel,
-    el("h2", {}, "RMS spot per field"), spots, img("spot", "RMS spot per field"),
-    el("h2", {}, "MTF"),
-    img("mtf", "MTF") || el("p", { class: "fine" }, (d.notes.find((n) => n.startsWith("MTF")) || "MTF not available.")),
-    el("h2", {}, "Distortion"),
-    kv([["At full field", `${fmt(dist.max_pct, 3)} %`]]),
-    img("distortion", "Distortion vs field"),
-    el("h2", {}, "Source"),
-    el("div", { class: "cite" },
-      el("p", {}, src.ref),
-      el("p", {}, src.locator),
-      src.url ? el("p", {}, el("a", { href: src.url, rel: "noopener" }, "source file"),
-        src.accessed ? ` (accessed ${src.accessed})` : "") : null,
-      el("p", {}, `License: ${src.license} · validation: ${d.validation_level}${d.verified ? "" : " (gate not passed)"}`),
-      el("p", {}, Object.values(d.files).map((f) =>
-        el("a", { href: f, download: "", style: "margin-right:0.75rem" }, f.split("/").pop()))),
-      el("p", {}, d.tags.map((t) => el("span", { class: "tag" }, t)))),
+    el("h2", {}, "Specs"), head,
+    section("system", "Stop, field, conjugate", system),
+    section("seidel", "Seidel sums", seidel),
+    section("spot", "RMS spot per field", spots),
+    d.design_notes || notes.length
+      ? section("notes", "Notes",
+        d.design_notes ? el("p", { class: "prose" }, d.design_notes) : null,
+        notes.length ? el("ul", { class: "notes" }, notes.map((n) => el("li", {}, n))) : null)
+      : null,
+    section("source", "Source",
+      el("div", { class: "cite" },
+        el("p", {}, src.ref),
+        el("p", {}, src.locator),
+        src.url ? el("p", {}, el("a", { href: src.url, rel: "noopener" }, "source file"),
+          src.accessed ? ` (accessed ${src.accessed})` : "") : null)),
+    section("provenance", "Provenance",
+      el("div", { class: "cite" },
+        el("p", {}, `License: ${src.license} · validation: ${d.validation_level}${d.verified ? "" : " (gate not passed)"}`),
+        el("p", {}, Object.values(d.files).map((f) =>
+          el("a", { href: f, download: "", class: "file" }, f.split("/").pop()))),
+        el("p", {}, d.tags.map((t) => el("span", { class: "tag" }, t))),
+        (manifest.caveats || []).length ? el("ul", { class: "notes" }, manifest.caveats.map((n) => el("li", {}, n))) : null)),
   );
 }
 
@@ -191,7 +250,11 @@ function renderPanel(d) {
 
 function show(id) {
   const d = byId.get(id);
-  for (const b of document.querySelectorAll(".family button")) b.classList.toggle("on", b.dataset.id === id);
+  for (const b of document.querySelectorAll(".family button")) {
+    const on = b.dataset.id === id;
+    b.classList.toggle("on", on);
+    if (on) b.closest("details").open = true;  // the reader always sees which design is up
+  }
   $("landing").hidden = !!d;
   $("view").hidden = !d;
   $("panel").hidden = !d;
@@ -217,6 +280,7 @@ load()
     $("count").textContent = `${m.count} designs in ${Object.keys(m.families).length} families.`;
     renderList();
     window.addEventListener("hashchange", () => show(location.hash.slice(1)));
+    $("zoom").addEventListener("click", () => $("zoom").close());  // click anywhere closes; ESC is native
     show(location.hash.slice(1));
   })
   .catch((e) => {
