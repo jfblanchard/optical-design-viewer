@@ -1,0 +1,69 @@
+# US01998704-1.zmx, read by aiod convert. Lengths in mm as in the file.
+name: US01998704-1
+orientation: as in the file
+aperture:
+  type: EPD
+  value: 7.62
+field:
+  type: angle
+  values:
+  - 0.0
+  - 12.0
+  - 20.0
+surfaces:
+- c: 0.0690708661461528
+  t: 2.032
+  glass:
+    nd: 1.620409
+    vd: 60.281
+    name: SK16
+  semi_diameter: 8.0
+- c: 0.026909448814901586
+  t: 0.1016
+  semi_diameter: 8.0
+- c: 0.10875590564562428
+  t: 2.54
+  glass:
+    nd: 1.67003
+    vd: 47.112
+    name: BAF10
+  semi_diameter: 6.0
+- c: 0.03582283463051982
+  t: 1.524
+  glass:
+    nd: 1.4645
+    vd: 65.769
+    name: FK3
+  semi_diameter: 6.0
+- c: -0.013122047244107609
+  t: 1.7272
+  glass:
+    nd: 1.68893
+    vd: 31.145
+    name: SF8
+  semi_diameter: 6.0
+- c: 0.166118110517392
+  t: 1.905
+  semi_diameter: 3.0
+- c: 0.0
+  t: 1.905
+  stop: true
+  semi_diameter: 2.230650938675
+- c: 0.01968503937007874
+  t: 0.508
+  glass:
+    nd: 1.568829
+    vd: 56.049
+    name: BAK4
+  semi_diameter: 4.0
+- c: 0.12824015761578786
+  t: 3.048
+  glass:
+    nd: 1.67003
+    vd: 47.112
+    name: BAF10
+  semi_diameter: 5.0
+- c: -0.02579133858575665
+  t: 12.32862155086
+  semi_diameter: 5.0
+notes: converted by aiod convert from US01998704-1.zmx

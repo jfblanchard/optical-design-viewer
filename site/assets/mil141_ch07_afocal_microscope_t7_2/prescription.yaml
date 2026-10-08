@@ -1,0 +1,13 @@
+# MIL-HDBK-141 Table 7.2, simple afocal microscope, thin lenses. Lengths in mm.
+# Object 17.6 mm before the objective (entrance pupil in contact with it), f_o 16, f_e 25.
+name: Simple afocal microscope, MIL-HDBK-141 Table 7.2
+units: mm
+orientation: forward
+object: {distance: 17.6}
+aperture: {type: EPD, value: 8.8}     # y = 4.4 at the objective (axial ray u = 0.25)
+field: {type: object_height, values: [0, 0.5, 1.0]}
+surfaces:
+  - {ideal_phi: 0.0625, t: 201.0, stop: true, comment: "objective (a); 176.0 to the first image + 25.0 to the eyelens"}
+  - {ideal_phi: 0.04, t: null, comment: "eyelens (b)"}
+image: {solve: exit_pupil, analysis_f: 1000}
+afocal: true

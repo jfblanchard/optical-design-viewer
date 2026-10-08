@@ -1,0 +1,85 @@
+# US003874771_Example05P.zmx, read by aiod convert. Lengths in mm as in the file.
+name: US 3,874,771 Example 5 (Zeiss Planar T f1.4 50mm)
+orientation: as in the file
+aperture:
+  type: imageFNO
+  value: 1.4
+field:
+  type: real_image_height
+  values:
+  - 0.0
+  - 15.12
+  - 21.6
+surfaces:
+- c: 0.0224961756501395
+  t: 5.09105
+  glass:
+    nd: 1.717
+    vd: 47.99
+    name: ___BLANK
+  semi_diameter: 18.75
+- c: 0.0034642772391789
+  t: 0.05885
+  semi_diameter: 18.75
+- c: 0.0458641961153026
+  t: 4.85565
+  glass:
+    nd: 1.78831
+    vd: 47.37
+    name: ___BLANK
+  semi_diameter: 16.355
+- c: 0.02935822911162
+  t: 1.5891
+  semi_diameter: 16.355
+- c: 0.0212377352079174
+  t: 1.18695
+  glass:
+    nd: 1.68893
+    vd: 31.17
+    name: ___BLANK
+  semi_diameter: 15.595
+- c: 0.0652571130253198
+  t: 7.136325
+  semi_diameter: 12.44
+- c: 0.0
+  t: 7.136325
+  stop: true
+  semi_diameter: 12.1445
+- c: -0.0577417212807114
+  t: 1.1477
+  glass:
+    nd: 1.7283
+    vd: 28.68
+    name: ___BLANK
+  semi_diameter: 12.6
+- c: 0.00267364309270991
+  t: 5.1499
+  glass:
+    nd: 1.78831
+    vd: 47.37
+    name: ___BLANK
+  semi_diameter: 15.175
+- c: -0.0329413314886188
+  t: 0.28445
+  semi_diameter: 15.175
+- c: -0.0114382449157001
+  t: 4.3848
+  glass:
+    nd: 1.78831
+    vd: 47.37
+    name: ___BLANK
+  semi_diameter: 15.805
+- c: -0.0353982300884956
+  t: 0.1275
+  semi_diameter: 15.805
+- c: 0.00607240123998433
+  t: 2.8349
+  glass:
+    nd: 1.744
+    vd: 44.77
+    name: ___BLANK
+  semi_diameter: 15.285
+- c: -0.0076447923674393
+  t: 35.4965
+  semi_diameter: 15.285
+notes: converted by aiod convert from US003874771_Example05P.zmx

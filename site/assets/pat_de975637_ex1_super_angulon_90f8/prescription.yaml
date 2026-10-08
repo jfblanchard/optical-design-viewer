@@ -1,0 +1,72 @@
+# DE00975637_Example01P.zmx, read by aiod convert. Lengths in mm as in the file.
+name: DE 975 637 C Example 1 (Schneider Super-Angulon 8 / 90)
+orientation: as in the file
+aperture:
+  type: imageFNO
+  value: 8.0
+field:
+  type: real_image_height
+  values:
+  - 0.0
+  - 74.9
+  - 107.0
+surfaces:
+- c: 0.00604883832060053
+  t: 1.953
+  glass:
+    nd: 1.4645
+    vd: 65.7
+    name: ___BLANK
+  semi_diameter: 23.16
+- c: 0.0481834827021297
+  t: 13.698
+  semi_diameter: 16.85
+- c: 0.043453700082562
+  t: 10.026
+  glass:
+    nd: 1.7174
+    vd: 29.5
+    name: ___BLANK
+  semi_diameter: 12.715
+- c: 0.0792518624187668
+  t: 9.873
+  glass:
+    nd: 1.5601
+    vd: 47.0
+    name: ___BLANK
+  semi_diameter: 7.435
+- c: 0.00106230865165412
+  t: 1.287
+  semi_diameter: 7.435
+- c: 0.0
+  t: 1.026
+  stop: true
+  semi_diameter: 6.29
+- c: 0.0
+  t: 9.162
+  glass:
+    nd: 1.5827
+    vd: 46.5
+    name: ___BLANK
+  semi_diameter: 7.625
+- c: -0.0789141414141414
+  t: 9.756
+  glass:
+    nd: 1.7174
+    vd: 29.5
+    name: ___BLANK
+  semi_diameter: 7.625
+- c: -0.0413052457662123
+  t: 13.698
+  semi_diameter: 12.715
+- c: -0.047666714333381
+  t: 1.953
+  glass:
+    nd: 1.4645
+    vd: 65.7
+    name: ___BLANK
+  semi_diameter: 16.73
+- c: -0.00371696086411906
+  t: 66.06
+  semi_diameter: 22.99
+notes: converted by aiod convert from DE00975637_Example01P.zmx

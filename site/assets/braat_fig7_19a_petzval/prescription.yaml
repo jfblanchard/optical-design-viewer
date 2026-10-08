@@ -1,0 +1,65 @@
+# Imaging_Optics_Figure_7_19a.zmx, read by aiod convert. Lengths in mm as in the file.
+name: Petzval portrait lens (present-day glasses); Imaging Optics p. 449
+orientation: as in the file
+object:
+  distance: 1075.0
+aperture:
+  type: imageFNO
+  value: 4.0
+field:
+  type: paraxial_image_height
+  values:
+  - 0.0
+  - 10.0
+  - 20.0
+  - 24.0
+wavelengths:
+  values:
+  - 0.55
+  primary: 0.55
+surfaces:
+- c: 0.01799998560001
+  t: 5.2
+  glass:
+    nd: 1.52249
+    vd: 59.731
+    name: K5
+  semi_diameter: 14.6
+- c: -0.02299997930002
+  t: 0.8
+  glass:
+    nd: 1.58144
+    vd: 40.778
+    name: LF5
+  semi_diameter: 14.6
+- c: 0.002
+  t: 16.0
+  semi_diameter: 14.6
+- c: 0.0
+  t: 17.0
+  stop: true
+  semi_diameter: 13.0
+- c: 0.009499996200002
+  t: 1.5
+  glass:
+    nd: 1.58144
+    vd: 40.778
+    name: LF5
+  semi_diameter: 12.0
+- c: 0.025499991075
+  t: 3.3
+  semi_diameter: 12.0
+- c: 0.02
+  t: 3.6
+  glass:
+    nd: 1.52249
+    vd: 59.731
+    name: K5
+  semi_diameter: 11.3
+- c: -0.0059999988
+  t: 79.5
+  semi_diameter: 11.3
+- c: 0.0
+  t: 0.0
+  semi_diameter: 24.008281728906724
+notes: converted by aiod convert from Imaging_Optics_Figure_7_19a.zmx

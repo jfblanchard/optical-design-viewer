@@ -1,0 +1,62 @@
+# US002720140_Example03P.zmx, read by aiod convert. Lengths in mm as in the file.
+name: US 2,720,140 Example 3 (Zeiss Sonnar T f4 150mm)
+orientation: as in the file
+aperture:
+  type: imageFNO
+  value: 4.0
+field:
+  type: real_image_height
+  values:
+  - 0.0
+  - 27.65
+  - 39.5
+surfaces:
+- c: 0.0134725496800269
+  t: 10.889
+  glass:
+    nd: 1.66672
+    vd: 48.4
+    name: ___BLANK
+  semi_diameter: 22.27
+- c: 0.00432210019492672
+  t: 0.248
+  semi_diameter: 22.27
+- c: 0.0293048880553276
+  t: 15.837
+  glass:
+    nd: 1.62041
+    vd: 60.3
+    name: ___BLANK
+  semi_diameter: 19.12
+- c: -0.00232781176382953
+  t: 2.228
+  glass:
+    nd: 1.72342
+    vd: 38.0
+    name: ___BLANK
+  semi_diameter: 19.12
+- c: 0.0413958686923045
+  t: 16.644
+  semi_diameter: 12.585
+- c: 0.0
+  t: 14.04
+  stop: true
+  semi_diameter: 11.926
+- c: 0.00185023803312296
+  t: 10.889
+  glass:
+    nd: 1.70154
+    vd: 41.1
+    name: ___BLANK
+  semi_diameter: 15.09
+- c: -0.0387987894777683
+  t: 10.394
+  glass:
+    nd: 1.6014
+    vd: 38.3
+    name: ___BLANK
+  semi_diameter: 16.18
+- c: -0.0026880925564029
+  t: 80.68
+  semi_diameter: 19.68
+notes: converted by aiod convert from US002720140_Example03P.zmx

@@ -1,0 +1,20 @@
+# MIL-HDBK-141 Table 14.8, Modified Erfle eyepiece. Lengths in cm as printed.
+# Book orientation (Section 14.2.1): parallel light enters through the exit pupil
+# (the stop, 5 mm), eye side first; the last t is the printed distance to the field stop.
+name: Modified Erfle eyepiece, MIL-HDBK-141 Table 14.8
+units: cm
+orientation: "reversed: light enters through the exit pupil, eye lens first"
+aperture: {type: EPD, value: 0.5}
+field: {type: angle, values: [0, 14, 22, 30]}
+surfaces:
+  - {c: 0, t: 1.788, stop: true, comment: "exit pupil (Fig 14.22)"}
+  - {c: 0, t: 0.55, glass: "638555", comment: "cemented triplet"}
+  - {c: -0.310, t: 0.180, glass: "649338"}
+  - {c: 0.275, t: 1.15, glass: "638556", comment: "printed 638556 (sic; likely 638555), kept as printed"}
+  - {c: -0.275, t: 0.05}
+  - {c: 0.123, t: 0.80, glass: "638555"}
+  - {c: -0.130, t: 0.05}
+  - {c: 0.234, t: 1.20, glass: "638555", comment: "field doublet"}
+  - {c: -0.234, t: 0.54, glass: "720293"}
+  - {c: 0.159, t: 0.9973, comment: "to field stop"}
+image: {solve: none}

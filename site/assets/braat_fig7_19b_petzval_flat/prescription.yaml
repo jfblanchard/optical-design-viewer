@@ -1,0 +1,65 @@
+# Imaging_Optics_Figure_7_19b.zmx, read by aiod convert. Lengths in mm as in the file.
+name: Redesigned Petzval lens with reduced field curvature; Imaging Optics p. 449.
+orientation: as in the file
+object:
+  distance: 0.0
+aperture:
+  type: imageFNO
+  value: 4.0
+field:
+  type: paraxial_image_height
+  values:
+  - 0.0
+  - 10.0
+  - 20.0
+  - 24.0
+wavelengths:
+  values:
+  - 0.55
+  primary: 0.55
+surfaces:
+- c: 0.0
+  t: 1075.0
+  semi_diameter: 241.46820637313868
+- c: 0.02672539125973
+  t: 5.2
+  glass:
+    nd: 1.52249
+    vd: 59.731
+    name: K5
+  semi_diameter: 13.5
+- c: -0.02268000553392
+  t: 0.8
+  glass:
+    nd: 1.58144
+    vd: 40.778
+    name: LF5
+  semi_diameter: 13.5
+- c: 0.006345008572107
+  t: 11.4973
+  semi_diameter: 13.2
+- c: 0.0
+  t: 21.3913
+  stop: true
+  semi_diameter: 11.9
+- c: 0.02376081414054
+  t: 1.5
+  glass:
+    nd: 1.58144
+    vd: 40.778
+    name: LF5
+  semi_diameter: 11.4
+- c: 0.04537369777487
+  t: 3.3
+  semi_diameter: 11.4
+- c: 0.03767911710293
+  t: 3.6
+  glass:
+    nd: 1.52249
+    vd: 59.731
+    name: K5
+  semi_diameter: 11.6
+- c: 0.01161719484243
+  t: 66.505
+  semi_diameter: 11.6
+notes: converted by aiod convert from Imaging_Optics_Figure_7_19b.zmx

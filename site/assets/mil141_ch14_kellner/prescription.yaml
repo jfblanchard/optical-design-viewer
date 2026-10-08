@@ -1,0 +1,16 @@
+# MIL-HDBK-141 Table 14.3, Kellner eyepiece. Lengths in cm as printed.
+# Book orientation (Section 14.2.1): parallel light enters through the exit pupil
+# (the stop, 5 mm), eye side first; the last t is the printed distance to the field stop.
+name: Kellner eyepiece, MIL-HDBK-141 Table 14.3
+units: cm
+orientation: "reversed: light enters through the exit pupil, eye lens first"
+aperture: {type: EPD, value: 0.5}
+field: {type: angle, values: [0, 14, 20]}
+surfaces:
+  - {c: 0, t: 0.705, stop: true, comment: "exit pupil (Fig 14.7)"}
+  - {c: 0.1039, t: 0.159, glass: "617366", comment: "eye doublet, flint"}
+  - {c: 0.7393, t: 0.995, glass: "541599", comment: "eye doublet, crown"}
+  - {c: -0.5525, t: 2.089}
+  - {c: 0.4699, t: 0.577, glass: "541599", comment: field lens}
+  - {c: 0, t: 0.5251, comment: "to field stop"}
+image: {solve: none}

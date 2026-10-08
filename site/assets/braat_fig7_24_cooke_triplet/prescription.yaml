@@ -1,0 +1,64 @@
+# Imaging_Optics_Figure_7_24.zmx, read by aiod convert. Lengths in mm as in the file.
+name: Triplet lens (SK16 - LF5 - SK16); Imaging Optics p.461.
+orientation: as in the file
+object:
+  distance: 0.0
+aperture:
+  type: imageFNO
+  value: 4.5
+field:
+  type: angle
+  values:
+  - 0.0
+  - 9.1
+  - 17.7
+  - 25.6
+wavelengths:
+  values:
+  - 0.55
+  primary: 0.55
+surfaces:
+- c: 0.0
+  t: 50000.0
+  semi_diameter: 23961.532574198194
+- c: 0.0401575783374
+  t: 3.5
+  glass:
+    nd: 1.620409
+    vd: 60.281
+    name: SK16
+  semi_diameter: 8.0
+- c: -0.003769549354144
+  t: 5.7134
+  semi_diameter: 7.6
+- c: 0.0
+  t: 1.0
+  semi_diameter: 5.140439689996769
+- c: 0.0
+  t: -1.0
+  stop: true
+  semi_diameter: 4.315
+- c: -0.04499862754186
+  t: 2.0
+  glass:
+    nd: 1.58144
+    vd: 40.778
+    name: LF5
+  semi_diameter: 4.45
+- c: 0.04302592742387
+  t: 3.7776
+  semi_diameter: 4.4
+- c: 0.01104019625053
+  t: 3.5
+  glass:
+    nd: 1.620409
+    vd: 60.281
+    name: SK16
+  semi_diameter: 6.4
+- c: -0.05208631744527
+  t: 42.1705
+  semi_diameter: 6.4
+- c: 0.0
+  t: 0.0
+  semi_diameter: 24.103986880996764
+notes: converted by aiod convert from Imaging_Optics_Figure_7_24.zmx

@@ -1,0 +1,69 @@
+# Imaging_Optics_Figure_7_20.zmx, read by aiod convert. Lengths in mm as in the file.
+name: Dallmeyer protrait lens; Imaging Optics p. 450.
+orientation: as in the file
+object:
+  distance: 0.0
+aperture:
+  type: imageFNO
+  value: 3.5
+field:
+  type: paraxial_image_height
+  values:
+  - 0.0
+  - 6.0
+  - 12.0
+  - 18.0
+  - 23.0
+wavelengths:
+  values:
+  - 0.55
+  primary: 0.55
+surfaces:
+- c: 0.0
+  t: 1087.0
+  semi_diameter: 229.59843979122493
+- c: 0.01944798830009
+  t: 5.481
+  glass:
+    nd: 1.52249
+    vd: 59.731
+    name: K5
+  semi_diameter: 13.6
+- c: -0.02608800004174
+  t: 0.8433
+  glass:
+    nd: 1.58144
+    vd: 40.778
+    name: LF5
+  semi_diameter: 13.6
+- c: 0.002846000359165
+  t: 18.974
+  semi_diameter: 13.0
+- c: 0.0
+  t: 23.51
+  stop: true
+  semi_diameter: 11.7
+- c: 0.005691999098387
+  t: 4.216
+  glass:
+    nd: 1.52249
+    vd: 59.731
+    name: K5
+  semi_diameter: 12.0
+- c: -0.01707600701482
+  t: 7.168
+  semi_diameter: 12.0
+- c: -0.02627803209073
+  t: 1.581
+  glass:
+    nd: 1.58144
+    vd: 40.778
+    name: LF5
+  semi_diameter: 12.0
+- c: -0.01109900086794
+  t: 62.0
+  semi_diameter: 12.0
+- c: 0.0
+  t: 0.0
+  semi_diameter: 22.90271000480359
+notes: converted by aiod convert from Imaging_Optics_Figure_7_20.zmx

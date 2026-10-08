@@ -1,0 +1,17 @@
+# MIL-HDBK-141 Table 14.4, Orthoscopic eyepiece. Lengths in cm as printed.
+# Book orientation (Section 14.2.1): parallel light enters through the exit pupil
+# (the stop, 5 mm), eye side first; the last t is the printed distance to the field stop.
+name: Orthoscopic eyepiece, MIL-HDBK-141 Table 14.4
+units: cm
+orientation: "reversed: light enters through the exit pupil, eye lens first"
+aperture: {type: EPD, value: 0.5}
+field: {type: angle, values: [0, 14, 20]}
+surfaces:
+  - {c: 0, t: 2.064, stop: true, comment: "exit pupil (Fig 14.10)"}
+  - {c: 0, t: 0.582, glass: "573574", comment: eye lens}
+  - {c: -0.4398, t: 0.0276}
+  - {c: 0.3089, t: 0.9921, glass: "513605", comment: "cemented triplet"}
+  - {c: -0.6281, t: 0.1012, glass: "617366"}
+  - {c: 0.6281, t: 0.9921, glass: "513605"}
+  - {c: -0.3089, t: 1.258, comment: "to field stop"}
+image: {solve: none}

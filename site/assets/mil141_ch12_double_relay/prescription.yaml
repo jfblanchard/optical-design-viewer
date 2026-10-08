@@ -1,0 +1,16 @@
+# MIL-HDBK-141 Sec 12.6 / Fig 12.2: double relay within 5 cm lens diameter, same D = 70 cm and
+# u_o = 0.14. Relays of half the focal length (f = 17.5 cm pairs) at D/4 and 3D/4, field lens
+# f = D/8 at the intermediate image. Ideal thin lenses (no glass in ch12). mm.
+name: Double relay, MIL-HDBK-141 Fig 12.2
+units: mm
+orientation: forward
+object: {distance: 175.0}
+aperture: {type: EPD, value: 49.0}   # u_o = 0.14 paraxial: 2 x 175 x 0.14
+field: {type: object_height, values: [0, 6.6, 13.2]}
+surfaces:
+  - {ideal_f: 175.0, t: 0.0, stop: true, comment: "first relay, lens 1"}
+  - {ideal_f: 175.0, t: 175.0, comment: "first relay, lens 2"}
+  - {ideal_f: 87.5, t: 175.0, comment: "field lens, f = D/8, at the intermediate image"}
+  - {ideal_f: 175.0, t: 0.0, comment: "second relay, lens 1"}
+  - {ideal_f: 175.0, t: 175.0, comment: "second relay, lens 2"}
+image: {solve: none}

@@ -1,0 +1,15 @@
+# MIL-HDBK-141 Table 14.2, Ramsden eyepiece. Lengths in cm as printed.
+# Book orientation (Section 14.2.1): parallel light enters through the exit pupil
+# (the stop, 5 mm), eye side first; the last t is the printed distance to the field stop.
+name: Ramsden eyepiece, MIL-HDBK-141 Table 14.2
+units: cm
+orientation: "reversed: light enters through the exit pupil, eye lens first"
+aperture: {type: EPD, value: 0.5}
+field: {type: angle, values: [0, 10, 15]}
+surfaces:
+  - {c: 0, t: 1.187, stop: true, comment: "exit pupil (Fig 14.4)"}
+  - {c: 0, t: 0.297, glass: "517645"}
+  - {c: -0.5712, t: 2.116}
+  - {c: 0.5077, t: 0.424, glass: "517645"}
+  - {c: 0, t: 0.6733, comment: "to field stop"}
+image: {solve: none}

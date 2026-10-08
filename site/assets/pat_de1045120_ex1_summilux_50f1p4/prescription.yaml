@@ -1,0 +1,82 @@
+# DE01045120_Example01P.zmx, read by aiod convert. Lengths in mm as in the file.
+name: DE 1045120 Example 1 (Leica Summilux-M 50mm F1.4)
+orientation: as in the file
+aperture:
+  type: imageFNO
+  value: 1.4
+field:
+  type: real_image_height
+  values:
+  - 0.0
+  - 15.12
+  - 21.6
+surfaces:
+- c: 0.0214910489781006
+  t: 6.125
+  glass:
+    nd: 1.79128
+    vd: 47.4
+    name: ___BLANK
+  semi_diameter: 17.92
+- c: 0.00477423821061552
+  t: 1.25
+  semi_diameter: 17.92
+- c: 0.0472511635599027
+  t: 7.375
+  glass:
+    nd: 1.64515
+    vd: 57.8
+    name: ___BLANK
+  semi_diameter: 15.94
+- c: 0.0133249830106467
+  t: 2.798
+  glass:
+    nd: 1.69416
+    vd: 30.9
+    name: ___BLANK
+  semi_diameter: 15.94
+- c: 0.0666622225184988
+  t: 5.663
+  semi_diameter: 11.07
+- c: 0.0
+  t: 4.462
+  stop: true
+  semi_diameter: 10.8785
+- c: -0.0515769657271063
+  t: 2.029
+  glass:
+    nd: 1.67158
+    vd: 32.9
+    name: ___BLANK
+  semi_diameter: 10.65
+- c: 0.0245004961350467
+  t: 7.625
+  glass:
+    nd: 1.74793
+    vd: 44.7
+    name: ___BLANK
+  semi_diameter: 12.245
+- c: -0.0339645070900909
+  t: 0.25
+  semi_diameter: 12.245
+- c: 0.00342942584552494
+  t: 3.375
+  glass:
+    nd: 1.79128
+    vd: 47.4
+    name: ___BLANK
+  semi_diameter: 13.63
+- c: -0.0113314447592068
+  t: 0.25
+  semi_diameter: 13.63
+- c: 0.00666120447899389
+  t: 2.548
+  glass:
+    nd: 1.79128
+    vd: 47.4
+    name: ___BLANK
+  semi_diameter: 14.66
+- c: -0.00498970872575313
+  t: 27.21
+  semi_diameter: 14.66
+notes: converted by aiod convert from DE01045120_Example01P.zmx

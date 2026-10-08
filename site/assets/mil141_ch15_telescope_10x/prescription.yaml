@@ -1,0 +1,26 @@
+# MIL-HDBK-141 Table 15.1, complete 10X telescope. c in 1/cm, t in cm, n_d/nu as printed.
+# Objective doublet, Porro prisms entered unfolded as an 11.6 cm block (glass 573574 per
+# Sec 15.4.1; the table prints n 1.5725, nu 57.4), Erfle-type eyepiece. The table ends at
+# the last eyepiece surface; the image plane is put at the paraxial exit pupil.
+name: 10X telescope, MIL-HDBK-141 Table 15.1
+units: cm
+orientation: forward (object at infinity, exit pupil at the eye)
+aperture: {type: EPD, value: 5.0}
+field: {type: angle, values: [0, 2.2, 3.302]}   # 3.302 = atan(tan 30 / 10)
+surfaces:
+  - {c: 0.07080, t: 0.80, glass: {nd: 1.517, vd: 64.5}, stop: true, comment: "objective, crown"}
+  - {c: -0.06874, t: 0.05}
+  - {c: -0.07165, t: 0.40, glass: {nd: 1.689, vd: 30.9}, comment: "objective, flint"}
+  - {c: -0.02413, t: 15.00}
+  - {c: 0.0, t: 11.60, glass: {nd: 1.5725, vd: 57.4}, comment: "Porro prisms, unfolded"}
+  - {c: 0.0, t: 3.0186}
+  - {c: -0.21670, t: 0.254, glass: {nd: 1.649, vd: 33.8}, comment: "eyepiece field doublet"}
+  - {c: 0.35000, t: 1.8796, glass: {nd: 1.620, vd: 55.5}}
+  - {c: -0.25000, t: 0.1015}
+  - {c: 0.15350, t: 0.8840, glass: {nd: 1.620, vd: 55.5}, comment: "center singlet"}
+  - {c: -0.10000, t: 0.1015}
+  - {c: 0.35000, t: 1.2294, glass: {nd: 1.517, vd: 64.5}, comment: "eye doublet"}
+  - {c: -0.27500, t: 0.12190, glass: {nd: 1.617, vd: 36.6}}
+  - {c: 0.00000, t: null, comment: "to exit pupil (solved)"}
+image: {solve: exit_pupil, analysis_f: 1000}
+afocal: true

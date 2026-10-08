@@ -1,0 +1,13 @@
+# MIL-HDBK-141 Sec 12.3.3 / Fig 12.1: unit-power relay from two f = 35 cm doublets with parallel
+# light between them, object-to-image D = 70 cm, u_o = 0.14. ch12 gives no glass prescription
+# (the doublets are unspecified telescope objectives), so ideal thin lenses are used. mm.
+name: Single relay, MIL-HDBK-141 Fig 12.1
+units: mm
+orientation: forward
+object: {distance: 350.0}
+aperture: {type: EPD, value: 98.0}   # u_o = 0.14 paraxial (141 uses paraxial slopes): 2 x 350 x 0.14
+field: {type: object_height, values: [0, 6.6, 13.2]}   # Sec 12.3.4: max object height 1.32 cm
+surfaces:
+  - {ideal_f: 350.0, t: 0.0, stop: true, comment: "relay doublet 1 (ideal)"}
+  - {ideal_f: 350.0, t: 350.0, comment: "relay doublet 2 (ideal), parallel light between"}
+image: {solve: none}

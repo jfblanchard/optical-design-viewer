@@ -1,0 +1,13 @@
+# MIL-HDBK-141 Table 7.4, afocal microscope with a two-lens (field + eye lens) eyepiece. mm.
+name: Afocal microscope with field lens, MIL-HDBK-141 Table 7.4
+units: mm
+orientation: forward
+object: {distance: 17.6}
+aperture: {type: EPD, value: 8.8}
+field: {type: object_height, values: [0, 0.5, 1.0]}
+surfaces:
+  - {ideal_phi: 0.0625, t: 151.0, stop: true, comment: "objective (a)"}
+  - {ideal_phi: 0.02662, t: 30.02, comment: "field lens (c)"}
+  - {ideal_phi: 0.06662, t: null, comment: "eyelens (b)"}
+image: {solve: exit_pupil, analysis_f: 1000}
+afocal: true

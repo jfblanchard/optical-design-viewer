@@ -1,0 +1,22 @@
+# MIL-HDBK-141 Figure 23.7, 1.8 mm fluorite (semi-apochromatic) oil objective. Radii in mm.
+# The figure prints radii without signs; signs are read from the drawing. NOT in the book,
+# assumed: cover glass n 1.52 (0.18 mm), immersion oil n 1.515 (0.111 mm), stop at the rear lens.
+name: 1.8 mm fluorite oil objective, MIL-HDBK-141 Fig 23.7
+units: mm
+orientation: forward (object in the cover glass, long conjugate at the image)
+object: {distance: 0.18, glass: {nd: 1.52, vd: 58.0, name: "assumed cover glass"}}
+aperture: {type: objectNA, value: 1.25}
+field: {type: object_height, values: [0, 0.03, 0.06]}
+surfaces:
+  - {r: 0, t: 0.111, glass: {nd: 1.515, vd: 41.0, name: "assumed immersion oil"}, comment: "cover glass top"}
+  - {r: 0, t: 0.98, glass: {nd: 1.517, vd: 64.5}, comment: "front hyperhemisphere"}
+  - {r: -0.816, t: 0.02}
+  - {r: -8.16, t: 1.14, glass: {nd: 1.511, vd: 63.5}, comment: "meniscus; 8.16 as printed (ambiguous at scan resolution)"}
+  - {r: -2.04, t: 0.251, comment: "correction collar, 'Adjustable'"}
+  - {r: 329.2, t: 0.70, glass: {nd: 1.56749, vd: 49.2}, comment: "middle doublet, flint"}
+  - {r: 5.40, t: 1.44, glass: {nd: 1.43385, vd: 95.4, name: fluorite}}
+  - {r: -3.72, t: 0.09}
+  - {r: -43.7, t: 1.10, glass: {nd: 1.621, vd: 36.3}, comment: "back doublet, flint"}
+  - {r: 4.09, t: 1.80, glass: {nd: 1.43385, vd: 95.4, name: fluorite}}
+  - {r: -4.96, t: null, stop: true}
+image: {solve: paraxial}

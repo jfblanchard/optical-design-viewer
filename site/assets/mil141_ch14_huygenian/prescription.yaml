@@ -1,0 +1,15 @@
+# MIL-HDBK-141 Table 14.1, Huygenian eyepiece. Lengths in cm as printed.
+# Book orientation (Section 14.2.1): parallel light enters through the exit pupil
+# (the stop, 5 mm), eye lens first, focusing on the field stop.
+name: Huygenian eyepiece, MIL-HDBK-141 Table 14.1
+units: cm
+orientation: "reversed: light enters through the exit pupil, eye lens first"
+aperture: {type: EPD, value: 0.5}
+field: {type: angle, values: [0, 10, 15]}
+surfaces:
+  - {c: 0, t: 0.292, stop: true, comment: "exit pupil (Fig 14.1)"}
+  - {c: 0, t: 0.3, glass: "517645", comment: eye lens}
+  - {c: -0.9519, t: 2.31}
+  - {c: 0, t: 0.45, glass: "517645", comment: field lens}
+  - {c: -0.6732, t: null, comment: "focus is virtual, inside the field lens"}
+image: {solve: paraxial}

@@ -1,0 +1,72 @@
+# CH346706_Example01P.zmx, read by aiod convert. Lengths in mm as in the file.
+name: CH 346706 Example 1 (Schneider Xenon 1.9 / 50)
+orientation: as in the file
+aperture:
+  type: imageFNO
+  value: 2.0
+field:
+  type: real_image_height
+  values:
+  - 0.0
+  - 15.12
+  - 21.6
+surfaces:
+- c: 0.0364697301239971
+  t: 3.35
+  glass:
+    nd: 1.67003
+    vd: 47.2
+    name: ___BLANK
+  semi_diameter: 13.65
+- c: 0.0127991808524254
+  t: 0.64
+  semi_diameter: 13.65
+- c: 0.0504032258064516
+  t: 4.47
+  glass:
+    nd: 1.69347
+    vd: 53.5
+    name: ___BLANK
+  semi_diameter: 12.63
+- c: 0.0118821292775665
+  t: 1.76
+  glass:
+    nd: 1.66446
+    vd: 35.9
+    name: ___BLANK
+  semi_diameter: 12.63
+- c: 0.0772200772200772
+  t: 6.07
+  semi_diameter: 9.38
+- c: 0.0
+  t: 4.54
+  stop: true
+  semi_diameter: 8.6425
+- c: -0.0662251655629139
+  t: 1.59
+  glass:
+    nd: 1.6398
+    vd: 34.6
+    name: ___BLANK
+  semi_diameter: 8.71
+- c: 0.0221778664892437
+  t: 5.94
+  glass:
+    nd: 1.65844
+    vd: 50.8
+    name: ___BLANK
+  semi_diameter: 10.75
+- c: -0.0477554918815664
+  t: 0.11
+  semi_diameter: 10.75
+- c: 0.000847680322796667
+  t: 2.63
+  glass:
+    nd: 1.74472
+    vd: 44.7
+    name: ___BLANK
+  semi_diameter: 11.695
+- c: -0.0258933195235629
+  t: 36.2
+  semi_diameter: 11.695
+notes: converted by aiod convert from CH346706_Example01P.zmx

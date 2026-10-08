@@ -1,0 +1,75 @@
+# US00583336-2-scaled.zmx, read by aiod convert. Lengths in mm as in the file.
+name: Original Double Gauss
+orientation: as in the file
+aperture:
+  type: imageFNO
+  value: 4.5
+field:
+  type: angle
+  values:
+  - 0.0
+  - 17.0
+  - 24.0
+surfaces:
+- c: 0.0
+  t: 4.5
+  semi_diameter: 8.97749980848
+- c: 0.07061398863114783
+  t: 1.386
+  glass:
+    nd: 1.5725
+    vd: 57.549
+    name: N-BAK1
+  semi_diameter: 6.3
+- c: 0.014407561088059014
+  t: 0.117
+  semi_diameter: 6.3
+- c: 0.0617455466024513
+  t: 2.313
+  glass:
+    nd: 1.5725
+    vd: 57.549
+    name: N-BAK1
+  semi_diameter: 5.94
+- c: -0.050851767098906694
+  t: 1.386
+  glass:
+    nd: 1.579559
+    vd: 53.866
+    name: N-BALF4
+  semi_diameter: 5.94
+- c: 0.11372682815876266
+  t: 2.313
+  semi_diameter: 4.5
+- c: 0.0
+  t: 2.313
+  stop: true
+  semi_diameter: 4.215000499256
+- c: -0.11372682815876266
+  t: 1.386
+  glass:
+    nd: 1.579559
+    vd: 53.866
+    name: N-BALF4
+  semi_diameter: 4.5
+- c: 0.050851767098906694
+  t: 2.313
+  glass:
+    nd: 1.5725
+    vd: 57.549
+    name: N-BAK1
+  semi_diameter: 5.94
+- c: -0.0617455466024513
+  t: 0.117
+  semi_diameter: 5.94
+- c: -0.014407561088059014
+  t: 1.386
+  glass:
+    nd: 1.5725
+    vd: 57.549
+    name: N-BAK1
+  semi_diameter: 6.3
+- c: -0.07061398863114783
+  t: 42.35170011441
+  semi_diameter: 6.3
+notes: converted by aiod convert from US00583336-2-scaled.zmx

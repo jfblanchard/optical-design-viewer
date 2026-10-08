@@ -1,0 +1,21 @@
+# MIL-HDBK-141 Table 14.9, Wild eyepiece. Lengths in cm as printed.
+# Book orientation (Section 14.2.1): parallel light enters through the exit pupil
+# (the stop, 5 mm), eye side first; the last t is the printed distance to the field stop.
+name: Wild eyepiece, MIL-HDBK-141 Table 14.9
+units: cm
+orientation: "reversed: light enters through the exit pupil, eye lens first"
+aperture: {type: EPD, value: 0.5}
+field: {type: angle, values: [0, 15, 25, 35]}
+surfaces:
+  - {c: 0, t: 1.895, stop: true, comment: "exit pupil (Fig 14.25)"}
+  - {c: -0.3636, t: 0.10, glass: "689309", comment: "cemented: flint"}
+  - {c: 0.04, t: 0.95, glass: "620603"}
+  - {c: -0.4000, t: 0.01}
+  - {c: -0.0200, t: 0.80, glass: "620603"}
+  - {c: -0.2243, t: 0.01}
+  - {c: 0.1025, t: 0.85, glass: "620603"}
+  - {c: -0.1025, t: 0.01}
+  - {c: 0.2171, t: 0.35, glass: "649338", comment: "field doublet"}
+  - {c: 0.4400, t: 2.25, glass: "573425"}
+  - {c: 0.2170, t: 0.761, comment: "to field stop"}
+image: {solve: none}

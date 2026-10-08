@@ -1,0 +1,51 @@
+# DE02818394_Example01P.zmx, read by aiod convert. Lengths in mm as in the file.
+name: DE 2818394 Example 1 (Rodenstock Geronar 210mm f6.8)
+orientation: as in the file
+aperture:
+  type: imageFNO
+  value: 6.8
+field:
+  type: real_image_height
+  values:
+  - 0.0
+  - 73.5
+  - 105.0
+surfaces:
+- c: 0.0300390507659958
+  t: 5.25
+  glass:
+    nd: 1.6229
+    vd: 60.07
+    name: ___BLANK
+  semi_diameter: 15.45
+- c: -0.000970609931280817
+  t: 3.4
+  semi_diameter: 15.18
+- c: -0.00660458358100522
+  t: 0.8
+  glass:
+    nd: 1.551
+    vd: 45.47
+    name: ___BLANK
+  semi_diameter: 14.95
+- c: 0.0327546675401245
+  t: 5.55
+  semi_diameter: 13.475
+- c: 0.0
+  t: 10.7
+  semi_diameter: 13.415
+- c: 0.0
+  t: 4.81
+  stop: true
+  semi_diameter: 13.338
+- c: 0.00264844536257217
+  t: 8.11
+  glass:
+    nd: 1.5187
+    vd: 63.96
+    name: ___BLANK
+  semi_diameter: 19.6
+- c: -0.00707263597142655
+  t: 177.95
+  semi_diameter: 20.4
+notes: converted by aiod convert from DE02818394_Example01P.zmx

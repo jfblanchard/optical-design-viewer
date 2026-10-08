@@ -1,0 +1,18 @@
+# MIL-HDBK-141 Table 14.6, Berthele eyepiece. Lengths in cm as printed.
+# Book orientation (Section 14.2.1): parallel light enters through the exit pupil
+# (the stop, 5 mm), eye side first; the last t is the printed distance to the field stop.
+name: Berthele eyepiece, MIL-HDBK-141 Table 14.6
+units: cm
+orientation: "reversed: light enters through the exit pupil, eye lens first"
+aperture: {type: EPD, value: 0.5}
+field: {type: angle, values: [0, 12, 18, 25]}
+surfaces:
+  - {c: 0, t: 1.743, stop: true, comment: "exit pupil (Fig 14.16)"}
+  - {c: -0.3774, t: 0.08, glass: "689309", comment: "cemented: flint"}
+  - {c: 0.2000, t: 0.8, glass: "620603", comment: "cemented: crown"}
+  - {c: -0.4238, t: 0.02}
+  - {c: 0.0714, t: 0.60, glass: "620603"}
+  - {c: -0.2107, t: 0.02}
+  - {c: 0.2452, t: 0.60, glass: "620603"}
+  - {c: 0, t: 2.458, comment: "to field stop"}
+image: {solve: none}

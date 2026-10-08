@@ -1,0 +1,61 @@
+# FR1066698_Example01P.zmx, read by aiod convert. Lengths in mm as in the file.
+name: FR 1.066.698 Example 1 (Zeiss Tessar f2.8 50mm)
+orientation: as in the file
+aperture:
+  type: imageFNO
+  value: 2.8
+field:
+  type: real_image_height
+  values:
+  - 0.0
+  - 15.12
+  - 21.6
+surfaces:
+- c: 0.0
+  t: 0.0
+  semi_diameter: 9.75
+- c: 0.0508776392775375
+  t: 5.15
+  glass:
+    nd: 1.67786
+    vd: 55.5
+    name: ___BLANK
+  semi_diameter: 9.885
+- c: 0.0
+  t: 3.05
+  semi_diameter: 9.885
+- c: -0.0281531531531532
+  t: 1.45
+  glass:
+    nd: 1.612
+    vd: 37.2
+    name: ___BLANK
+  semi_diameter: 8.69
+- c: 0.0594618700758139
+  t: 2.445
+  semi_diameter: 7.225
+- c: 0.0
+  t: 1.28
+  stop: true
+  semi_diameter: 7.187
+- c: 0.00261934385436448
+  t: 1.195
+  glass:
+    nd: 1.5738
+    vd: 42.5
+    name: ___BLANK
+  semi_diameter: 8.29
+- c: 0.060666727333394
+  t: 5.0
+  glass:
+    nd: 1.6608
+    vd: 50.8
+    name: ___BLANK
+  semi_diameter: 8.66
+- c: -0.0407780451005179
+  t: 0.0
+  semi_diameter: 8.66
+- c: 0.0
+  t: 40.27
+  semi_diameter: 8.35
+notes: converted by aiod convert from FR1066698_Example01P.zmx

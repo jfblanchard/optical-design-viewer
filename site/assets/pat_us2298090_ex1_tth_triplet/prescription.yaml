@@ -1,0 +1,48 @@
+# US02298090-1.zmx, read by aiod convert. Lengths in mm as in the file.
+name: US02298090-1
+orientation: as in the file
+aperture:
+  type: EPD
+  value: 5.334
+field:
+  type: angle
+  values:
+  - 0.0
+  - 14.0
+  - 21.0
+surfaces:
+- c: 0.11378740151866043
+  t: 2.7686
+  glass:
+    nd: 1.5725
+    vd: 57.549
+    name: BAK1
+  semi_diameter: 4.0
+- c: 0.0
+  t: 0.5750820701111
+  semi_diameter: 3.0
+- c: 0.0
+  t: 2.218917929889
+  stop: true
+  semi_diameter: 2.292475144096
+- c: -0.06110629925816539
+  t: 0.7874
+  glass:
+    nd: 1.698951
+    vd: 30.068
+    name: SF15
+  semi_diameter: 3.0
+- c: 0.11024803147635064
+  t: 2.794
+  semi_diameter: 3.0
+- c: 0.032673228334217305
+  t: 2.159
+  glass:
+    nd: 1.883
+    vd: 40.805
+    name: TAFD30
+  semi_diameter: 6.0
+- c: -0.05346456693180709
+  t: 19.21356594519
+  semi_diameter: 6.0
+notes: converted by aiod convert from US02298090-1.zmx

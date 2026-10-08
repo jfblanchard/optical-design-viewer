@@ -1,0 +1,58 @@
+# DE01096057_Example01P.zmx, read by aiod convert. Lengths in mm as in the file.
+name: DE 1096057 Example 1 (Leica Telyt 200mm F4)
+orientation: as in the file
+aperture:
+  type: imageFNO
+  value: 4.0
+field:
+  type: real_image_height
+  values:
+  - 0.0
+  - 15.12
+  - 21.6
+surfaces:
+- c: 0.0159897665494084
+  t: 10.0
+  glass:
+    nd: 1.5709
+    vd: 63.0
+    name: ___BLANK
+  semi_diameter: 27.15
+- c: -0.00355239786856128
+  t: 5.5
+  semi_diameter: 27.15
+- c: -0.00714285714285714
+  t: 4.0
+  glass:
+    nd: 1.7343
+    vd: 28.1
+    name: ___BLANK
+  semi_diameter: 25.23
+- c: 0.00222866057499443
+  t: 32.64
+  semi_diameter: 25.23
+- c: 0.0
+  t: 4.16
+  stop: true
+  semi_diameter: 18.2445
+- c: -0.00854700854700855
+  t: 5.0
+  glass:
+    nd: 1.7394
+    vd: 40.8
+    name: ___BLANK
+  semi_diameter: 19.57
+- c: -0.0159744408945687
+  t: 18.2
+  semi_diameter: 19.57
+- c: -0.0268096514745308
+  t: 4.0
+  glass:
+    nd: 1.5035
+    vd: 56.3
+    name: ___BLANK
+  semi_diameter: 14.99
+- c: -0.0127129417747267
+  t: 103.24
+  semi_diameter: 14.99
+notes: converted by aiod convert from DE01096057_Example01P.zmx

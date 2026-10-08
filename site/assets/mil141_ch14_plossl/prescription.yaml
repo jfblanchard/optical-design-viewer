@@ -1,0 +1,17 @@
+# MIL-HDBK-141 Table 14.5, Symmetrical (Plossl) eyepiece. Lengths in cm as printed.
+# Book orientation (Section 14.2.1): parallel light enters through the exit pupil
+# (the stop, 5 mm), eye side first; the last t is the printed distance to the field stop.
+name: Symmetrical (Plossl) eyepiece, MIL-HDBK-141 Table 14.5
+units: cm
+orientation: "reversed: light enters through the exit pupil, eye lens first"
+aperture: {type: EPD, value: 0.5}
+field: {type: angle, values: [0, 14, 20]}
+surfaces:
+  - {c: 0, t: 2.135, stop: true, comment: "exit pupil (Fig 14.13)"}
+  - {c: 0.2135, t: 0.1478, glass: "649338", comment: "doublet 1, flint"}
+  - {c: 0.4868, t: 0.8026, glass: "517645", comment: "doublet 1, crown"}
+  - {c: -0.2708, t: 0.0051}
+  - {c: 0.2708, t: 0.8026, glass: "517645", comment: "doublet 2, crown"}
+  - {c: -0.4868, t: 0.1478, glass: "649338", comment: "doublet 2, flint"}
+  - {c: -0.2135, t: 1.881, comment: "to field stop"}
+image: {solve: none}

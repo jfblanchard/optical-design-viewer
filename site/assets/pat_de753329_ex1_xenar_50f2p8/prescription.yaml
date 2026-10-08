@@ -1,0 +1,65 @@
+# DE00753329_Example01P.zmx, read by aiod convert. Lengths in mm as in the file.
+name: DE 753 329 C Example 1 (Schneider Xenar 2.8 / 50)
+orientation: as in the file
+aperture:
+  type: imageFNO
+  value: 2.9
+field:
+  type: real_image_height
+  values:
+  - 0.0
+  - 15.12
+  - 21.6
+surfaces:
+- c: 0.046264168401573
+  t: 2.8585
+  glass:
+    nd: 1.589
+    vd: 61.2
+    name: ___BLANK
+  semi_diameter: 9.43
+- c: -0.00163478829491581
+  t: 0.2035
+  semi_diameter: 9.43
+- c: 0.0368731563421829
+  t: 2.035
+  glass:
+    nd: 1.6375
+    vd: 56.1
+    name: ___BLANK
+  semi_diameter: 8.92
+- c: 0.0234714235418378
+  t: 2.442
+  semi_diameter: 8.25
+- c: -0.0276319425255595
+  t: 0.8235
+  glass:
+    nd: 1.6045
+    vd: 37.8
+    name: ___BLANK
+  semi_diameter: 7.81
+- c: 0.0607348921955664
+  t: 3.1
+  semi_diameter: 7.01
+- c: 0.0
+  t: 0.989
+  stop: true
+  semi_diameter: 7.031
+- c: -0.00980824873718798
+  t: 1.4245
+  glass:
+    nd: 1.5145
+    vd: 54.7
+    name: ___BLANK
+  semi_diameter: 7.2
+- c: 0.0512163892445583
+  t: 3.721
+  glass:
+    nd: 1.6025
+    vd: 59.5
+    name: ___BLANK
+  semi_diameter: 8.0
+- c: -0.0508259212198221
+  t: 40.93
+  semi_diameter: 8.0
+notes: converted by aiod convert from DE00753329_Example01P.zmx
