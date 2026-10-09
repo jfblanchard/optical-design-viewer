@@ -1,0 +1,18 @@
+# Personal / agent handoff files - not part of the public project
+PROJECT_STATUS.md
+ai_readme.md
+devnotes.md
+lessons_learned.md
+todo.md
+RESUME.md
+devins_tasks/
+exchanges/
+devins/
+docs/work_log/
+docs/session_logs/
+*.log
+
+# Sandbox / local
+.hermes/
+.pytest_cache/
+__pycache__/
