@@ -1,10 +1,12 @@
-# Basic Optical Design Library
+# Basic Optical Design Viewer
+
+**Try it live:** https://optical-design-viewer.pages.dev
 
 A browser/viewer for basic optical designs. This is a lens reference, not a designer: nothing here is edited or recomputed in the browser.
 
 ## What you see
 
-![Basic Optical Design Library](docs/img/viewer.png)
+![Basic Optical Design Viewer](docs/img/viewer.png)
 
 
 For each design: a cross-section of the lens, a spot diagram, a ray fan, and an MTF plot, plus the specs, and Seidel sums.

@@ -1,4 +1,4 @@
-// Lens Viewer: renders the static bundle written by `aiod export-viewer`.
+// Basic Optical Design Viewer: renders the static bundle written by `aiod export-viewer`.
 // Data comes from manifest.js (window.LENS_MANIFEST, works from file://) or, failing that,
 // manifest.json over http. Nothing is computed here.
 
@@ -265,7 +265,7 @@ function show(id) {
   renderPanel(d);
   $("center").scrollTop = 0;
   $("panel").scrollTop = 0;
-  document.title = `${shortTitle(d)} · Lens Viewer`;
+  document.title = `${shortTitle(d)} · Basic Optical Design Viewer`;
 }
 
 async function load() {
